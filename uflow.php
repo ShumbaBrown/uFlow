@@ -20,7 +20,10 @@
 </html>
 <?php
 $db = pg_connect("host=ec2-54-204-0-88.compute-1.amazonaws.com port=5432 dbname=d3hnfidbth4s7m user=socgheqnrisjpe password=2b039a1b59f3a43a62a998c5b756574ca8d4ce660eb7a068613ccd695cc0e60a");
-$query = "INSERT INTO answers VALUES ('$_POST['1']','$_POST[questionid]',
-'$_POST[answer]')";
+$query = "INSERT INTO book VALUES ('$_POST[questionid]','$_POST[questionid]',
+'$_POST[questionid]','$_POST[questionid]','$_POST[questionid]',
+'$_POST[questionid]')";
 $result = pg_query($query); 
+
+
 ?>
