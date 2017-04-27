@@ -7,7 +7,7 @@ li {list-style: none;}
 </style>
 </head>
 <body>
-<h2>Enter bookid and enter</h2>
+<h2>Enter id and enter</h2>
 <ul>
 <form name="display" action="enter-bookid.php" method="POST" >
 <li>Book ID:</li><li><input type="text" name="bookid" /></li>
@@ -18,15 +18,14 @@ li {list-style: none;}
 </html>
 <?php
 $db = pg_connect("host=ec2-54-204-0-88.compute-1.amazonaws.com port=5432 dbname=d3hnfidbth4s7m user=socgheqnrisjpe password=2b039a1b59f3a43a62a998c5b756574ca8d4ce660eb7a068613ccd695cc0e60a");
-$result = pg_query($db, "SELECT * FROM book where bookid = '$_POST[bookid]'");
+$result = pg_query($db, "SELECT * FROM book where id = '$_POST[bookid]'");
 $row = pg_fetch_assoc($result);
 if (isset($_POST['submit']))
 {
 echo "<ul>
 <form name='update' action='enter-bookid.php' method='POST' >
-<li>Book ID:</li><li><input type='text' name='bookid_updated' value='$row[book_id]'  /></li>
-<li>Book Name:</li><li><input type='text' name='book_name_updated' value='$row[book_name]' /></li><li>Author:</li><li><input type='text' name='author_updated' value='$row[author]' /></li> <li>Publisher:</li><li><input type='text' name='publisher_updated' value='$row[publisher]' /></li>  <li>Date of publication:</li><li><input type='text' name='dop_updated' value='$row[date_of_publication]' /></li>
-<li>Price (USD):</li><li><input type='text' name='price_updated' value='$row[price]' /></li>
+<li>Question:</li><li><input type='text' name='bookid_updated' value='$row[text]'  /></li>
+<li>image name:</li><li><input type='text' name='book_name_updated' value='$row[image]' /></li>
 <li><input type='submit' name='new' /></li>
   </form>
 </ul>";
