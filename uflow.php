@@ -23,6 +23,6 @@ $db = pg_connect("host=ec2-54-204-0-88.compute-1.amazonaws.com port=5432 dbname=
 $query = "INSERT INTO answers VALUES ('$_POST[questionid]','$_POST[questionid]',
 '$_POST[answer]')";
 $result = pg_query($query); 
-
-
 ?>
+
+<!-- open with the first question then in the php request you would push that answer and pull and update the questions-->
