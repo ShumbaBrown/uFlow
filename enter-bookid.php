@@ -18,7 +18,7 @@ li {list-style: none;}
 </html>
 <?php
 $db = pg_connect("host=ec2-54-204-0-88.compute-1.amazonaws.com port=5432 dbname=d3hnfidbth4s7m user=socgheqnrisjpe password=2b039a1b59f3a43a62a998c5b756574ca8d4ce660eb7a068613ccd695cc0e60a");
-$result = pg_query($db, "SELECT * FROM book where id = '$_POST[bookid]'");
+$result = pg_query($db, "SELECT * FROM questions where id = '$_POST[bookid]'");
 $row = pg_fetch_assoc($result);
 if (isset($_POST['submit']))
 {
