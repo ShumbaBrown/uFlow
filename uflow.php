@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>uFlow</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
 <body>
     <img src="/assets/images/yellow_nmd.jpg" alt="Question" style="width:304px;height:228px;">
     <form name="survey" action="uflow.php" method="POST" >
