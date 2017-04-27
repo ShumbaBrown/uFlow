@@ -1,1 +1,1 @@
-<?php header( 'Location: /enter-bookid.php' ) ;  ?>
+<?php header( 'Location: /uflow.php' ) ;  ?>
